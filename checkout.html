@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Checkout</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+
+      <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>Shipping address</h2>
+
+                <form class="form-horizontal" id="shipping-address" method="post">
+                    <div class="form-group">
+                      <div class="col-sm-6">
+                        <label for="checkout_shipping_address_first_name">First name</label>
+                        <input placeholder="First name" autocomplete="shipping given-name" data-backup="first_name" class="form-control" type="text" name="checkout[shipping_address][first_name]" id="checkout_shipping_address_first_name">
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="checkout_shipping_address_last_name">Last name</label>
+                        <input placeholder="Last name" autocomplete="shipping family-name" data-backup="last_name" class="form-control" type="text" name="checkout[shipping_address][last_name]" id="checkout_shipping_address_last_name">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                          <label for="checkout_shipping_address_company">Company (optional)</label>
+                          <input placeholder="Company (optional)" autocomplete="shipping organization" data-backup="company" class="form-control" type="text" name="checkout[shipping_address][company]" id="checkout_shipping_address_company">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-8">
+                          <label for="checkout_shipping_address_address1">Address</label>
+                          <input placeholder="Address" autocomplete="shipping address-line1" data-backup="address1" class="form-control" type="text" name="checkout[shipping_address][address1]" id="checkout_shipping_address_address1">
+                        </div>
+                        <div class="col-sm-4">
+                          <label for="checkout_shipping_address_address2">Apt.</label>
+                          <input placeholder="Apt, suite, etc. (optional)" autocomplete="shipping address-line2" data-backup="address2" class="form-control" type="text" name="checkout[shipping_address][address2]" id="checkout_shipping_address_address2">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                          <label for="checkout_shipping_address_city">City</label>
+                          <input placeholder="City" autocomplete="shipping address-level2" data-backup="city" class="form-control" type="text" name="checkout[shipping_address][city]" id="checkout_shipping_address_city">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div data-country-section="1" class="col-sm-12">
+                          <label for="checkout_shipping_address_country">Country</label>
+                          <select autocomplete="shipping country" data-backup="country" class=" form-control" name="checkout[shipping_address][country]" id="checkout_shipping_address_country">
+                              <option data-code="US" selected="selected" value="United States">United States</option>
+                          </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div data-province-section="1" class="col-sm-12">
+                          <label for="checkout_shipping_address_province">State</label>
+                          <input type="hidden" name="checkout[shipping_address][province]">
+                          <select placeholder="New York" data-backup="province" class=" form-control" name="checkout[shipping_address][province]" id="checkout_shipping_address_province">
+                              <option value="" disabled="">State</option>
+                              <option data-code="AL" value="Alabama">Alabama</option>
+                              <option data-code="AK" value="Alaska">Alaska</option>
+                              <option data-code="AS" value="American Samoa">American Samoa</option>
+                              <option data-code="AZ" value="Arizona">Arizona</option>
+                              <option data-code="AR" value="Arkansas">Arkansas</option>
+                              <option data-code="AA" value="Armed Forces Americas">Armed Forces Americas</option>
+                              <option data-code="AE" value="Armed Forces Europe">Armed Forces Europe</option>
+                              <option data-code="AP" value="Armed Forces Pacific">Armed Forces Pacific</option>
+                              <option data-code="CA" value="California">California</option>
+                              <option data-code="CO" value="Colorado">Colorado</option>
+                              <option data-code="CT" value="Connecticut">Connecticut</option>
+                              <option data-code="DE" value="Delaware">Delaware</option>
+                              <option data-code="FM" value="Federated States of Micronesia">Federated States of Micronesia</option>
+                              <option data-code="FL" value="Florida">Florida</option>
+                              <option data-code="GA" value="Georgia">Georgia</option>
+                              <option data-code="GU" value="Guam">Guam</option>
+                              <option data-code="HI" value="Hawaii">Hawaii</option>
+                              <option data-code="ID" value="Idaho">Idaho</option>
+                              <option data-code="IL" value="Illinois">Illinois</option>
+                              <option data-code="IN" value="Indiana">Indiana</option>
+                              <option data-code="IA" value="Iowa">Iowa</option>
+                              <option data-code="KS" value="Kansas">Kansas</option>
+                              <option data-code="KY" value="Kentucky">Kentucky</option>
+                              <option data-code="LA" value="Louisiana">Louisiana</option>
+                              <option data-code="ME" value="Maine">Maine</option>
+                              <option data-code="MH" value="Marshall Islands">Marshall Islands</option>
+                              <option data-code="MD" value="Maryland">Maryland</option>
+                              <option data-code="MA" value="Massachusetts">Massachusetts</option>
+                              <option data-code="MI" value="Michigan">Michigan</option>
+                              <option data-code="MN" value="Minnesota">Minnesota</option>
+                              <option data-code="MS" value="Mississippi">Mississippi</option>
+                              <option data-code="MO" value="Missouri">Missouri</option>
+                              <option data-code="MT" value="Montana">Montana</option>
+                              <option data-code="NE" value="Nebraska">Nebraska</option>
+                              <option data-code="NV" value="Nevada">Nevada</option>
+                              <option data-code="NH" value="New Hampshire">New Hampshire</option>
+                              <option data-code="NJ" value="New Jersey">New Jersey</option>
+                              <option data-code="NM" value="New Mexico">New Mexico</option>
+                              <option data-code="NY" value="New York">New York</option>
+                              <option data-code="NC" value="North Carolina">North Carolina</option>
+                              <option data-code="ND" value="North Dakota">North Dakota</option>
+                              <option data-code="MP" value="Northern Mariana Islands">Northern Mariana Islands</option>
+                              <option data-code="OH" value="Ohio">Ohio</option>
+                              <option data-code="OK" value="Oklahoma">Oklahoma</option>
+                              <option data-code="OR" value="Oregon">Oregon</option>
+                              <option data-code="PW" value="Palau">Palau</option>
+                              <option data-code="PA" value="Pennsylvania">Pennsylvania</option>
+                              <option data-code="PR" value="Puerto Rico">Puerto Rico</option>
+                              <option data-code="RI" value="Rhode Island">Rhode Island</option>
+                              <option data-code="SC" value="South Carolina">South Carolina</option>
+                              <option data-code="SD" value="South Dakota">South Dakota</option>
+                              <option data-code="TN" value="Tennessee">Tennessee</option>
+                              <option data-code="TX" value="Texas">Texas</option>
+                              <option data-code="UT" value="Utah">Utah</option>
+                              <option data-code="VT" value="Vermont">Vermont</option>
+                              <option data-code="VI" value="Virgin Islands">Virgin Islands</option>
+                              <option data-code="VA" value="Virginia">Virginia</option>
+                              <option data-code="WA" value="Washington">Washington</option>
+                              <option data-code="DC" value="Washington DC">Washington DC</option>
+                              <option data-code="WV" value="West Virginia">West Virginia</option>
+                              <option data-code="WI" value="Wisconsin">Wisconsin</option>
+                              <option data-code="WY" value="Wyoming">Wyoming</option>
+                          </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-3">
+                            <label for="checkout_shipping_address_zip">Zip code</label>
+                            <input placeholder="Zip code" autocomplete="shipping postal-code" data-backup="zip" class="form-control" type="text" name="checkout[shipping_address][zip]" id="checkout_shipping_address_zip">
+                        </div>
+                        <div class="col-sm-9">
+                          <label for="checkout_shipping_address_phone">Phone</label>
+                          <input placeholder="Phone" autocomplete="shipping tel" data-backup="phone" class="form-control" type="tel" name="checkout[shipping_address][phone]" id="checkout_shipping_address_phone">
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                      <button name="button" type="submit" class="btn btn-primary">
+                          Continue to shipping method
+                      </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
